@@ -4,6 +4,7 @@ func NestedAdd(xs []interface{}) int {
 	if len(xs) == 0 {
 		return 0
 	}
+
 	switch v := xs[0].(type) {
 	case int:
 		return v + NestedAdd(xs[1:])
