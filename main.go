@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	"github.com/jakub-szewczyk/algos/iterative_sorts"
+	"github.com/jakub-szewczyk/algos/recursive_sorts/practice"
 )
 
 func main() {
@@ -18,4 +19,11 @@ func main() {
 	fmt.Println("Input", xs)
 	fmt.Println()
 	fmt.Println("Insertion sort", iterative_sorts.InsertionSort(xs))
+	fmt.Println()
+	fmt.Println("RECURSIVE SORTS")
+	fmt.Println("----------------------------------------------------------------------------------------------------")
+	ys := []interface{}{1, []interface{}{2, 3}, 4, []interface{}{5, []interface{}{6, 7, []interface{}{1, 1}}}}
+	fmt.Println("Input", ys)
+	fmt.Println()
+	fmt.Println("Nested addition", practice.NestedAdd(ys))
 }
