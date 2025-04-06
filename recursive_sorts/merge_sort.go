@@ -2,18 +2,8 @@ package recursive_sorts
 
 func merge(xs []int, ys []int) []int {
 	zs := []int{}
-	length := len(xs) + len(ys)
 
-	for len(zs) < length {
-		if len(xs) > 0 && len(ys) == 0 {
-			zs = append(zs, xs...)
-			break
-		}
-		if len(xs) == 0 && len(ys) > 0 {
-			zs = append(zs, ys...)
-			break
-		}
-
+	for len(xs) > 0 && len(ys) > 0 {
 		if xs[0] < ys[0] {
 			zs = append(zs, xs[0])
 			xs = xs[1:]
@@ -22,6 +12,9 @@ func merge(xs []int, ys []int) []int {
 			ys = ys[1:]
 		}
 	}
+
+	zs = append(zs, xs...)
+	zs = append(zs, ys...)
 
 	return zs
 }
