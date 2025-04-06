@@ -43,4 +43,10 @@ func main() {
 	fmt.Println()
 	fmt.Println("Merge sort", recursive_sorts.MergeSort(xs))
 	fmt.Println()
+
+	xs = []int{10, 5, 3, 8, 2, 6, 4, 7, 9, 1}
+	fmt.Println("Input", xs)
+	fmt.Println()
+	fmt.Println("Quick sort", recursive_sorts.QuickSort(xs))
+	fmt.Println()
 }

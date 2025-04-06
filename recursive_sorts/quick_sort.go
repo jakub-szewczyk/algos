@@ -17,5 +17,28 @@ package recursive_sorts
 // Best for: large datasets, arrays, and general-purpose sorting with O(n log n) average time.
 // Downside: worst-case O(n²) if the pivot is poorly chosen (avoided with randomization).
 func QuickSort(xs []int) []int {
-	return xs
+	if len(xs) < 2 {
+		return xs
+	}
+
+	i := len(xs) - 1
+	p := xs[i]
+
+	left, right := []int{}, []int{}
+	for _, x := range xs[:i] {
+		if x < p {
+			left = append(left, x)
+		} else {
+			right = append(right, x)
+		}
+	}
+
+	ys, zs := QuickSort(left), QuickSort(right)
+
+	final := []int{}
+	final = append(final, ys...)
+	final = append(final, p)
+	final = append(final, zs...)
+
+	return final
 }

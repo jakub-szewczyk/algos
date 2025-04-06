@@ -41,8 +41,7 @@ func MergeSort(xs []int) []int {
 
 	i := len(xs) / 2
 
-	ys := MergeSort(xs[:i])
-	zs := MergeSort(xs[i:])
+	ys, zs := MergeSort(xs[:i]), MergeSort(xs[i:])
 
 	return merge(ys, zs)
 }
