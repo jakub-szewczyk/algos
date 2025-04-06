@@ -29,6 +29,11 @@ func merge(xs []int, ys []int) []int {
 
 // Stable
 // Non-destructive
+
+// A divide-and-conquer algorithm with O(n log n) time complexity, splitting the array recursively and merging sorted halves.
+// JavaScript engines use it under the hood when `Array.prototype.sort()` method is invoked.
+// Great for: linked lists, stable sorting, parallel processing, and guaranteed performance.
+// Downside: requires extra O(n) space.
 func MergeSort(xs []int) []int {
 	if len(xs) < 2 {
 		return xs

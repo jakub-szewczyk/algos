@@ -10,6 +10,10 @@ package iterative_sorts
 
 // Stable (maintains the relative order of equal elements)
 // Destructive (mutates the input)
+
+// A simple but inefficient O(n²) sorting algorithm that repeatedly swaps adjacent elements until sorted.
+// Used for: teaching purposes, detecting nearly sorted data, and small datasets.
+// Not practical for large inputs.
 func BubbleSort(xs []int) []int {
 	for i := 0; i < len(xs); i++ {
 		swapped := false
