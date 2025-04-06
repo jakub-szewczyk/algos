@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"github.com/jakub-szewczyk/algos/iterative_sorts"
-	"github.com/jakub-szewczyk/algos/recursive_sorts/practice"
+	"github.com/jakub-szewczyk/algos/recursive_sorts"
 )
 
 func main() {
@@ -26,15 +26,21 @@ func main() {
 	fmt.Println("RECURSIVE SORTS")
 	fmt.Println("----------------------------------------------------------------------------------------------------")
 
-	ys := []interface{}{1, []interface{}{2, 3}, 4, []interface{}{5, []interface{}{6, 7, []interface{}{1, 1}}}}
-	fmt.Println("Input", ys)
-	fmt.Println()
-	fmt.Println("Nested addition", practice.NestedAdd(ys))
-	fmt.Println()
+	// ys := []interface{}{1, []interface{}{2, 3}, 4, []interface{}{5, []interface{}{6, 7, []interface{}{1, 1}}}}
+	// fmt.Println("Input", ys)
+	// fmt.Println()
+	// fmt.Println("Nested addition", practice.NestedAdd(ys))
+	// fmt.Println()
 
-	x := 10
-	fmt.Println("Input", x)
+	// x := 10
+	// fmt.Println("Input", x)
+	// fmt.Println()
+	// fmt.Println("Factorial", practice.Factorial(10))
+	// fmt.Println()
+
+	xs = []int{10, 5, 3, 8, 2, 6, 4, 7, 9, 1}
+	fmt.Println("Input", xs)
 	fmt.Println()
-	fmt.Println("Factorial", practice.Factorial(10))
+	fmt.Println("Merge sort", recursive_sorts.MergeSort(xs))
 	fmt.Println()
 }
