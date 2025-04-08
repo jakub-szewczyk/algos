@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	"github.com/jakub-szewczyk/algos/iterative_sorts"
+	"github.com/jakub-szewczyk/algos/non_comparison_sorts"
 	"github.com/jakub-szewczyk/algos/recursive_sorts"
 )
 
@@ -48,5 +49,14 @@ func main() {
 	fmt.Println("Input", xs)
 	fmt.Println()
 	fmt.Println("Quick sort", recursive_sorts.QuickSort(xs))
+	fmt.Println()
+
+	fmt.Println("NON-COMPARISON SORTS")
+	fmt.Println("----------------------------------------------------------------------------------------------------")
+
+	xs = []int{10, 5, 3, 8, 2, 6, 4, 7, 9, 1}
+	fmt.Println("Input", xs)
+	fmt.Println()
+	fmt.Println("Radix sort", non_comparison_sorts.RadixSort(xs))
 	fmt.Println()
 }
