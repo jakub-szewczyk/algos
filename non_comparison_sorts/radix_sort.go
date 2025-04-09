@@ -6,6 +6,24 @@ import (
 	"strconv"
 )
 
+// Time complexity
+// O(nk)
+// Θ(nk)
+// Ω(nk)
+
+// Space complexity
+// O(n + k)
+// Θ(n + k)
+// Ω(n + k)
+
+// Stable
+// Destructive/non-destructive
+
+// A non-comparative sorting algorithm that sorts numbers digit by digit (least significant to most significant) using a stable sub-sorting method.
+// It works best on integers and fixed-length strings.
+// Best for:
+// - sorting large numbers efficiently (O(nk) time complexity, where k is the number of digits),
+// - fixed-length strings or data with a known range.
 func RadixSort(xs []int) []int {
 	buckets := [10][]int{}
 
