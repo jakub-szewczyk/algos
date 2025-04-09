@@ -6,6 +6,7 @@ import (
 	"github.com/jakub-szewczyk/algos/iterative_sorts"
 	"github.com/jakub-szewczyk/algos/non_comparison_sorts"
 	"github.com/jakub-szewczyk/algos/recursive_sorts"
+	"github.com/jakub-szewczyk/algos/search"
 )
 
 func main() {
@@ -58,5 +59,24 @@ func main() {
 	fmt.Println("Input", xs)
 	fmt.Println()
 	fmt.Println("Radix sort", non_comparison_sorts.RadixSort(xs))
+	fmt.Println()
+
+	fmt.Println("SEARCH")
+	fmt.Println("----------------------------------------------------------------------------------------------------")
+
+	xs = []int{10, 5, 3, 8, 2, 6, 4, 7, 9, 1}
+	s := 8
+	fmt.Printf("Input - value: %v; array: %v", s, xs)
+	fmt.Println()
+	i, v := search.LinearSearch(s, xs)
+	fmt.Printf("Linear search - index: %v; value: %v\n", i, v)
+	fmt.Println()
+
+	xs = []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+	s = 8
+	fmt.Printf("Input - value: %v; array: %v", s, xs)
+	fmt.Println()
+	i, v = search.BinarySearch(s, xs)
+	fmt.Printf("Binary search - index: %v; value: %v\n", i, v)
 	fmt.Println()
 }
